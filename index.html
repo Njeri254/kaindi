@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joseph Kaindi</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#">
+            <img class="h-10 w-auto" src="Images/logo.png" alt="ICC Nairobi Logo">
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <div class="relative group">
+            <button class="hover:text-blue-600 font-medium">About Us</button>
+            <div class="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-md z-10">
+              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Our Story</a>
+              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Leadership</a>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <button class="hover:text-blue-600 font-medium">Ministries</button>
+            <div class="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-md z-10">
+              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Children</a>
+              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Youth</a>
+              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Worship</a>
+            </div>
+          </div>
+
+          <a href="#" class="hover:text-blue-600 font-medium">Sermons</a>
+          <a href="#" class="hover:text-blue-600 font-medium">Give</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="md:hidden">
+          <button id="mobileMenuButton" class="text-gray-700 text-2xl focus:outline-none">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <div>
+        <button class="w-full text-left font-medium text-gray-700 hover:text-blue-600" onclick="toggleDropdown('about')">About Us ▾</button>
+        <div id="about" class="hidden ml-4 mt-1 space-y-1">
+          <a href="#" class="block text-sm hover:text-blue-500">Our Story</a>
+          <a href="#" class="block text-sm hover:text-blue-500">Leadership</a>
+        </div>
+      </div>
+      <div>
+        <button class="w-full text-left font-medium text-gray-700 hover:text-blue-600" onclick="toggleDropdown('ministries')">Ministries ▾</button>
+        <div id="ministries" class="hidden ml-4 mt-1 space-y-1">
+          <a href="#" class="block text-sm hover:text-blue-500">Children</a>
+          <a href="#" class="block text-sm hover:text-blue-500">Youth</a>
+          <a href="#" class="block text-sm hover:text-blue-500">Worship</a>
+        </div>
+      </div>
+      <a href="#" class="block font-medium text-gray-700 hover:text-blue-600">Sermons</a>
+      <a href="#" class="block font-medium text-gray-700 hover:text-blue-600">Give</a>
+    </div>
+  </nav>
+
+  <!-- JavaScript to toggle mobile dropdowns -->
+  <script>
+    document.getElementById('mobileMenuButton').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    function toggleDropdown(id) {
+      document.getElementById(id).classList.toggle('hidden');
+    }
+  </script>
+
+  <!-- Image Slider -->
+  <div class="relative w-full max-w-7xl mx-auto mt-10">
+    <!-- Slider Container -->
+    <div class="overflow-hidden rounded-lg">
+      <div class="flex transition-transform duration-700 ease-in-out" id="slider">
+        <!-- Slide 1 -->
+        <div class="w-full flex-shrink-0">
+          <img src="Images/logo.png" alt="Slide 1" class="w-full h-64 object-cover">
+        </div>
+        <!-- Slide 2 -->
+        <div class="w-full flex-shrink-0">
+          <img src="Images/logo.png" alt="Slide 2" class="w-full h-64 object-cover">
+        </div>
+        <!-- Slide 3 -->
+        <div class="w-full flex-shrink-0">
+          <img src="Images/logo.png" alt="Slide 3" class="w-full h-64 object-cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 p-3 bg-gray-800 text-white rounded-full opacity-50 hover:opacity-100 focus:outline-none">
+      &#8592;
+    </button>
+    <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 p-3 bg-gray-800 text-white rounded-full opacity-50 hover:opacity-100 focus:outline-none">
+      &#8594;
+    </button>
+  </div>
+
+  <!-- JavaScript to handle slider -->
+  <script>
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const slider = document.getElementById('slider');
+    let slideIndex = 0;
+
+    const slides = slider.children;
+    const totalSlides = slides.length;
+
+    function goToSlide(index) {
+      slideIndex = index;
+      slider.style.transform = `translateX(-${100 * slideIndex}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+      slideIndex = (slideIndex === 0) ? totalSlides - 1 : slideIndex - 1;
+      goToSlide(slideIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+      slideIndex = (slideIndex === totalSlides - 1) ? 0 : slideIndex + 1;
+      goToSlide(slideIndex);
+    });
+
+    // Auto slide every 5 seconds
+    setInterval(() => {
+      slideIndex = (slideIndex === totalSlides - 1) ? 0 : slideIndex + 1;
+      goToSlide(slideIndex);
+    }, 5000);
+  </script>
+
+
+<!-- Service Times Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Our Ministry</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service Time 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">School Outreach Ministry</h3>
+        <p class="text-lg text-gray-600">Description</p>
+      </div>
+
+      <!-- Service Time 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Social Outreach Ministry</h3>
+        <p class="text-lg text-gray-600">Description</p>
+      </div>
+
+      <!-- Service Time 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">School Plays and Films</h3>
+        <p class="text-lg text-gray-600">Description</p>
+      </div>
+
+      <!--  Service Time 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Evangelism (Sport and Open Air)</h3>
+        <p class="text-lg text-gray-600">Description</p>
+      </div>
+
+      <!--  Service Time 5 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Media and Photography</h3>
+        <p class="text-lg text-gray-600">Description</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Events Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Upcoming Events</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Event 1 -->
+      <div class="relative bg-white overflow-hidden rounded-lg shadow-lg">
+        <img src="https://iccnairobi.org/wp-content/uploads/2023/02/ICC-slider-1.jpg" alt="Church Picnic" class="w-full h-64 object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-white px-4 py-6">
+          <h3 class="text-3xl font-bold">Church Picnic</h3>
+          <p class="text-xl mt-2">Saturday, June 5th, 2025</p>
+          <a href="#" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-blue-700">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="relative bg-white overflow-hidden rounded-lg shadow-lg">
+        <img src="https://iccnairobi.org/wp-content/uploads/2023/02/ICC-slider-2.jpg" alt="Youth Conference" class="w-full h-64 object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-white px-4 py-6">
+          <h3 class="text-3xl font-bold">Youth Conference</h3>
+          <p class="text-xl mt-2">Friday, June 12th, 2025</p>
+          <a href="#" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-blue-700">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="relative bg-white overflow-hidden rounded-lg shadow-lg">
+        <img src="https://iccnairobi.org/wp-content/uploads/2023/02/ICC-slider-3.jpg" alt="Missionary Outreach" class="w-full h-64 object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-white px-4 py-6">
+          <h3 class="text-3xl font-bold">Missionary Outreach</h3>
+          <p class="text-xl mt-2">Sunday, June 20th, 2025</p>
+          <a href="#" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-blue-700">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Connect with Us Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Connect With Us</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1: I Have Decided -->
+      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">I Have Decided</h3>
+        <p class="text-lg text-gray-600 mb-4">If you have made the decision to follow Jesus, let us know. We would love to help you take the next steps in your journey of faith.</p>
+        <button onclick="openModal('decidedModal')" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</button>
+      </div>
+
+      <!-- Card 2: Karibu (Welcome) -->
+      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Karibu</h3>
+        <p class="text-lg text-gray-600 mb-4">We are excited to welcome you to our community! Whether you are new or have been attending for a while, we would love to get to know you better.</p>
+        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Get Connected</a>
+      </div>
+
+      <!-- Card 3: Prayer Request -->
+      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Prayer Request</h3>
+        <p class="text-lg text-gray-600 mb-4">If you need prayer, we are here for you. Submit your prayer requests and our team will be praying for you.</p>
+        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Submit Request</a>
+      </div>
+
+      <!-- Card 4: Join a Group -->
+      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Join a Group</h3>
+        <p class="text-lg text-gray-600 mb-4">Life is better in community. Find a group that fits your interests, and get connected with others who are growing in their faith.</p>
+        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Explore Groups</a>
+      </div>
+
+      <!-- Card 5: Volunteer -->
+      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Volunteer</h3>
+        <p class="text-lg text-gray-600 mb-4">We believe in serving our community. If you're interested in volunteering, we have many opportunities to get involved.</p>
+        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Get Involved</a>
+      </div>
+
+      <!-- Card 6: Give -->
+      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Give</h3>
+        <p class="text-lg text-gray-600 mb-4">Your generosity makes a difference. Learn more about how you can support the ministry and make an impact in the lives of others.</p>
+        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Give Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for 'I Have Decided' -->
+<div id="decidedModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white p-8 rounded-lg w-96">
+    <h3 class="text-2xl font-bold text-gray-800 mb-4">I Have Decided to Follow Jesus</h3>
+    <p class="text-lg text-gray-600 mb-4">Please fill out this form to let us know you've made the decision to follow Jesus. Our team will reach out to guide you.</p>
+    
+    <!-- Form -->
+    <form action="#" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" class="w-full p-2 border border-gray-300 rounded-md" required>
+      <input type="email" name="email" placeholder="Your Email" class="w-full p-2 border border-gray-300 rounded-md" required>
+      <textarea name="message" placeholder="Your Message" class="w-full p-2 border border-gray-300 rounded-md" required></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700">Submit</button>
+    </form>
+
+    <!-- Close Modal Button -->
+    <button onclick="closeModal('decidedModal')" class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700">Close</button>
+  </div>
+</div>
+
+<script>
+  // Open Modal Function
+  function openModal(modalId) {
+    document.getElementById(modalId).classList.remove("hidden");
+  }
+
+  // Close Modal Function
+  function closeModal(modalId) {
+    document.getElementById(modalId).classList.add("hidden");
+  }
+</script>
+
+
+
+<!-- Connect with Us Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Connect with Us</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Information -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Contact Information</h3>
+        <p class="text-lg text-gray-600 mb-4">We’d love to hear from you! Get in touch with us using the information below.</p>
+
+        <ul class="space-y-4">
+          <li class="flex items-center">
+            <span class="font-semibold text-gray-800">Address:</span>
+            <span class="ml-2 text-gray-600">123 Church St, Nairobi, Kenya</span>
+          </li>
+          <li class="flex items-center">
+            <span class="font-semibold text-gray-800">Phone:</span>
+            <span class="ml-2 text-gray-600">+254 712 345 678</span>
+          </li>
+          <li class="flex items-center">
+            <span class="font-semibold text-gray-800">Email:</span>
+            <span class="ml-2 text-gray-600">contact@iccnairobi.org</span>
+          </li>
+        </ul>
+
+        <!-- Social Media Links -->
+        <div class="mt-8 flex space-x-6 justify-center">
+          <a href="https://www.facebook.com/ICCNairobi" class="text-blue-600 hover:text-blue-800">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2L6 14l6 6V4l6 6"></path>
+            </svg>
+          </a>
+          <a href="https://www.twitter.com/ICCNairobi" class="text-blue-400 hover:text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 19.4l3.4-6.6-5.5-1.5 4.4-4.4-5.5-2L12 5l3.2 4.6 3.4-.6 3 6.1-5 2.1L15 17.2l-2.7-4.8z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/ICCNairobi" class="text-pink-600 hover:text-pink-800">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 3H4.5a1.5 1.5 0 00-1.5 1.5v15a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5V4.5a1.5 1.5 0 00-1.5-1.5zm-7.5 12a3 3 0 110-6 3 3 0 010 6zm-2.25-6a2.25 2.25 0 114.5 0 2.25 2.25 0 01-4.5 0z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Google Map -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Find Us</h3>
+        <div class="w-full h-64">
+          <!-- Embed Google Map -->
+          <iframe class="w-full h-full rounded-lg shadow-lg"
+            src="https://www.google.com/maps/embed/v1/place?q=Church%20Street,%20Nairobi,%20Kenya&key=YOUR_GOOGLE_MAPS_API_KEY"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="bg-white p-6 rounded-lg shadow-lg mt-8">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Contact Form</h3>
+      <form action="#" method="POST">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-gray-700">Name</label>
+            <input type="text" id="name" name="name" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm" required>
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700">Email</label>
+            <input type="email" id="email" name="email" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm" required>
+          </div>
+        </div>
+        <div class="mt-6">
+          <label for="message" class="block text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm" required></textarea>
+        </div>
+        <button type="submit" class="mt-6 w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      <!-- Contact Information -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-bold">Contact Us</h3>
+        <p class="text-gray-400">123 Church St, Nairobi, Kenya</p>
+        <p class="text-gray-400">Phone: +254 712 345 678</p>
+        <p class="text-gray-400">Email: info@icc.org</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-bold">Quick Links</h3>
+        <ul class="space-y-4">
+          <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media & Newsletter -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-bold">Connect With Us</h3>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-6 text-2xl">
+          <a href="#" class="text-gray-400 hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-red-600"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="text-gray-400 hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="mt-6">
+          <h4 class="text-lg font-semibold">Subscribe to our Newsletter</h4>
+          <form action="#" method="POST" class="mt-4 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <input type="email" name="email" placeholder="Your Email" class="p-2 w-full rounded-md border border-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-600" required>
+            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="mt-12 text-center text-gray-400 text-sm">
+      <p>&copy; 2025 Joseph Kaindi. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
