@@ -119,39 +119,59 @@
 </div>
 
 <!-- ================= HERO ================= -->
-<section class="bg-royal text-white py-24">
-  <div class="max-w-4xl mx-auto text-center px-6">
+<section class="relative text-white h-screen flex items-center overflow-hidden">
+  <!-- Background Image with Parallax -->
+  <div class="absolute inset-0">
+    <div class="parallax-bg w-full h-full">
+      <img src="Images/kaindi 1.jpg" alt="Hero Background" class="w-full h-full object-cover">
+      <!-- Dark + Brand Gradient Overlay -->
+      <div class="absolute inset-0 bg-black/50 bg-gradient-to-r from-purple-700 via-pink-600 to-orange-500 opacity-70"></div>
+    </div>
+  </div>
 
+  <!-- Hero Content -->
+  <div class="relative max-w-4xl mx-auto text-center px-6 z-10">
     <h1
-      class="text-5xl md:text-5xl font-extrabold text-gray-100 mb-6"
+      class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg"
       data-aos="fade-up"
       data-aos-delay="100"
     >
-      Uniting Nations in <span
-        class="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500
-               text-transparent bg-clip-text">
+      Uniting Nations in 
+      <span class="bg-gradient-to-r from-purple-300 via-pink-300 to-orange-300
+                   text-transparent bg-clip-text">
         Prayer, Media, and Mission
       </span>
     </h1>
-    <p class="text-lg mb-10 opacity-90"  data-aos="fade-up"
-      data-aos-delay="200">
-        ANFOC Global Network mobilizes believers worldwide to advance God’s Kingdom
+
+    <p class="text-lg md:text-xl mb-10 opacity-90 drop-shadow-md" data-aos="fade-up" data-aos-delay="200">
+      ANFOC Global Network mobilizes believers worldwide to advance God’s Kingdom
       through strategic prayer movements, transformative media initiatives,
       and bold evangelistic action across every continent.
     </p>
 
     <div class="flex justify-center gap-4 flex-wrap">
       <a href="#programs"
-         class="px-8 py-3 rounded-full bg-for-christ font-bold">
+         class="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 font-bold shadow-lg hover:shadow-xl transition">
         Join the Prayer Wave
       </a>
       <a href="#media"
-         class="px-8 py-3 rounded-full border-2 border-white font-bold">
+         class="px-8 py-3 rounded-full border-2 border-white font-bold shadow-lg hover:shadow-xl transition">
         Watch Our Stories
       </a>
     </div>
   </div>
 </section>
+
+<!-- Parallax Script -->
+<script>
+  // Parallax effect for hero background
+  const parallaxBg = document.querySelector('.parallax-bg');
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    parallaxBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+  });
+</script>
+
 
 <!-- ================= INTRO + VISION ================= -->
 
