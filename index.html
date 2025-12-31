@@ -2,465 +2,593 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>All Nations For Christ | ANFOC Global Network</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joseph Kaindi</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Montserrat Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind Brand Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: "#0f2a44",
+            fcPurple: "#5b2cff",
+            fcMagenta: "#c026d3",
+            fcOrange: "#f97316",
+          },
+          backgroundImage: {
+            "for-christ": "linear-gradient(90deg, #5b2cff, #c026d3, #f97316)",
+          },
+        }
+      }
+    }
+  </script>
 
-  
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<!-- Font Awesome CDN -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  rel="stylesheet"
+/>
+
+
+
+
+  <!-- Gradient Text Utility -->
   <style>
-    body { font-family: 'Montserrat', sans-serif; }
-     html {
-    scroll-behavior: smooth;
-  }
+    .text-for-christ {
+      background: linear-gradient(90deg, #5b2cff, #c026d3, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   </style>
+
 </head>
-<body class="bg-gray-100">
 
-  <!-- Navigation Bar -->
-  <nav class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <a href="#">
-            <img class="h-10 w-auto" src="Images/logo.png" alt="JK">
-          </a>
-        </div>
+<body class="font-sans text-gray-800">
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-6 items-center">
-          <div class="relative group">
-            <button class="hover:text-blue-600 font-medium">About Us</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-md z-10">
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Our Story</a>
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Leadership</a>
-            </div>
-          </div>
+<!-- ================= HEADER / NAV ================= -->
+<header id="navbar"
+  class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-          <div class="relative group">
-            <button class="hover:text-blue-600 font-medium">Ministries</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-md z-10">
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Children</a>
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Youth</a>
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Worship</a>
-            </div>
-          </div>
+    <!-- LOGO -->
+<!-- LOGO -->
+<!-- LOGO -->
+<div class="flex items-center gap-3">
+  <img
+    src="Images/logo.png"
+    alt="All Nations For Christ Logo"
+    class="h-12 w-auto"
+  />
+</div>
 
-          <a href="#" class="hover:text-blue-600 font-medium">Sermons</a>
-          <a href="#" class="hover:text-blue-600 font-medium">Give</a>
-        </div>
 
-        <!-- Mobile Hamburger -->
-        <div class="md:hidden">
-          <button id="mobileMenuButton" class="text-gray-700 text-2xl focus:outline-none">☰</button>
-        </div>
-      </div>
-    </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
-      <div>
-        <button class="w-full text-left font-medium text-gray-700 hover:text-blue-600" onclick="toggleDropdown('about')">About Us ▾</button>
-        <div id="about" class="hidden ml-4 mt-1 space-y-1">
-          <a href="#" class="block text-sm hover:text-blue-500">Our Story</a>
-          <a href="#" class="block text-sm hover:text-blue-500">Leadership</a>
-        </div>
-      </div>
-      <div>
-        <button class="w-full text-left font-medium text-gray-700 hover:text-blue-600" onclick="toggleDropdown('ministries')">Ministries ▾</button>
-        <div id="ministries" class="hidden ml-4 mt-1 space-y-1">
-          <a href="#" class="block text-sm hover:text-blue-500">Children</a>
-          <a href="#" class="block text-sm hover:text-blue-500">Youth</a>
-          <a href="#" class="block text-sm hover:text-blue-500">Worship</a>
-          <a href="#" class="block text-sm hover:text-blue-500">Christian Films</a>
-        </div>
-      </div>
-      <a href="#" class="block font-medium text-gray-700 hover:text-blue-600">Sermons</a>
-      <a href="#" class="block font-medium text-gray-700 hover:text-blue-600">Give</a>
-    </div>
-  </nav>
 
-  <!-- JavaScript to toggle mobile dropdowns -->
-  <script>
-    document.getElementById('mobileMenuButton').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
-    });
+    <!-- DESKTOP NAV -->
+    <nav class="hidden md:flex items-center space-x-8 font-semibold text-royal">
+      <a href="#about" class="hover:text-fcPurple">About</a>
+      <a href="#programs" class="hover:text-fcPurple">Programs</a>
+      <a href="#news" class="hover:text-fcPurple">News & Stories</a>
+      <a href="#get-involved" class="hover:text-fcPurple">Get Involved</a>
+      <a href="#resources" class="hover:text-fcPurple">Resources</a>
+      <a href="#media" class="hover:text-fcPurple">Media Hub</a>
+      <a href="#donate" class="hover:text-fcPurple">Donate/Partner</a>
+      <a href="#contact" class="hover:text-fcPurple">Contact</a>
 
-    function toggleDropdown(id) {
-      document.getElementById(id).classList.toggle('hidden');
-    }
-  </script>
+      <a href="#partner"
+         class="px-6 py-2 rounded-full text-white font-bold bg-for-christ">
+        Partner With Us
+      </a>
+    </nav>
 
-  <!-- Image Slider -->
-  <div class="relative w-full max-w-7xl mx-auto mt-10">
-    <!-- Slider Container -->
-    <div class="overflow-hidden rounded-lg">
-      <div class="flex transition-transform duration-700 ease-in-out" id="slider">
-        <!-- Slide 1 -->
-        <div class="w-full flex-shrink-0">
-          <img src="Images/kaindi 1.jpg" alt="Slide 1" class="w-full h-64 object-cover">
-        </div>
-        <!-- Slide 2 -->
-        <div class="w-full flex-shrink-0">
-          <img src="Images/logo.png" alt="Slide 2" class="w-full h-64 object-cover">
-        </div>
-        <!-- Slide 3 -->
-        <div class="w-full flex-shrink-0">
-          <img src="Images/logo.png" alt="Slide 3" class="w-full h-64 object-cover">
-        </div>
-      </div>
-    </div>
-
-    <!-- Navigation Arrows -->
-    <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 p-3 bg-gray-800 text-white rounded-full opacity-50 hover:opacity-100 focus:outline-none">
-      &#8592;
-    </button>
-    <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 p-3 bg-gray-800 text-white rounded-full opacity-50 hover:opacity-100 focus:outline-none">
-      &#8594;
-    </button>
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menuBtn" class="md:hidden text-3xl text-royal">☰</button>
   </div>
+</header>
 
-  <!-- JavaScript to handle slider -->
-  <script>
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
-    const slider = document.getElementById('slider');
-    let slideIndex = 0;
+<!-- ================= MOBILE DRAWER ================= -->
+<div id="mobileMenu" class="fixed inset-0 bg-black/40 hidden z-50">
+  <div class="bg-white w-72 h-full p-6">
+    <button id="closeMenu" class="text-2xl mb-6">✕</button>
 
-    const slides = slider.children;
-    const totalSlides = slides.length;
+    <nav class="flex flex-col space-y-5 font-semibold text-royal">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#news">News & Stories</a>
+      <a href="#get-involved">Get Involved</a>
+      <a href="#resources">Resources</a>
+      <a href="#media">Media Hub</a>
+      <a href="#donate">Donate/Partner</a>
+      <a href="#contact">Contact</a>
 
-    function goToSlide(index) {
-      slideIndex = index;
-      slider.style.transform = `translateX(-${100 * slideIndex}%)`;
-    }
-
-    prevButton.addEventListener('click', () => {
-      slideIndex = (slideIndex === 0) ? totalSlides - 1 : slideIndex - 1;
-      goToSlide(slideIndex);
-    });
-
-    nextButton.addEventListener('click', () => {
-      slideIndex = (slideIndex === totalSlides - 1) ? 0 : slideIndex + 1;
-      goToSlide(slideIndex);
-    });
-
-    // Auto slide every 5 seconds
-    setInterval(() => {
-      slideIndex = (slideIndex === totalSlides - 1) ? 0 : slideIndex + 1;
-      goToSlide(slideIndex);
-    }, 5000);
-  </script>
-
-
-<!-- Service Times Section -->
-<section class="bg-gray-50 py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Our Ministry</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Service Time 1 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">School Outreach Ministry</h3>
-        <p class="text-lg text-gray-600">Description</p>
-      </div>
-
-      <!-- Service Time 2 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Youth Ministry</h3>
-        <p class="text-lg text-gray-600">Description</p>
-      </div>
-
-      <!-- Service Time 3 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">School Plays and Films</h3>
-        <p class="text-lg text-gray-600">Description</p>
-      </div>
-
-      <!--  Service Time 4 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Evangelism (Sport and Open Air)</h3>
-        <p class="text-lg text-gray-600">Description</p>
-      </div>
-
-      <!--  Service Time 5 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Media and Photography</h3>
-        <p class="text-lg text-gray-600">Description</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Upcoming Events Section -->
-<section class="bg-gray-50 py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Upcoming Events</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Event 1 -->
-      <div class="relative bg-white overflow-hidden rounded-lg shadow-lg">
-        <img src="https://iccnairobi.org/wp-content/uploads/2023/02/ICC-slider-1.jpg" alt="Mission" class="w-full h-64 object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
-        <div class="absolute inset-0 flex flex-col justify-center items-center text-white px-4 py-6">
-          <h3 class="text-3xl font-bold">Mega Mission (Nakuru)</h3>
-          <p class="text-xl mt-2">Saturday, June 5th, 2025</p>
-          <a href="#" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-blue-700">Learn More</a>
-        </div>
-      </div>
-
-      <!-- Event 2 -->
-      <div class="relative bg-white overflow-hidden rounded-lg shadow-lg">
-        <img src="https://iccnairobi.org/wp-content/uploads/2023/02/ICC-slider-2.jpg" alt="Youth Conference" class="w-full h-64 object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
-        <div class="absolute inset-0 flex flex-col justify-center items-center text-white px-4 py-6">
-          <h3 class="text-3xl font-bold">Youth Conference</h3>
-          <p class="text-xl mt-2">Friday, June 12th, 2025</p>
-          <a href="#" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-blue-700">Learn More</a>
-        </div>
-      </div>
-
-      <!-- Event 3 -->
-      <div class="relative bg-white overflow-hidden rounded-lg shadow-lg">
-        <img src="https://iccnairobi.org/wp-content/uploads/2023/02/ICC-slider-3.jpg" alt="Missionary Outreach" class="w-full h-64 object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
-        <div class="absolute inset-0 flex flex-col justify-center items-center text-white px-4 py-6">
-          <h3 class="text-3xl font-bold">Missionary Outreach</h3>
-          <p class="text-xl mt-2">Sunday, June 20th, 2025</p>
-          <a href="#" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-blue-700">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Connect with Us Section -->
-<section class="bg-gray-50 py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Connect With Us</h2>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Card 1: I Have Decided -->
-      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">I Have Decided</h3>
-        <p class="text-lg text-gray-600 mb-4">If you have made the decision to follow Jesus, let us know. We would love to help you take the next steps in your journey of faith.</p>
-        <button onclick="openModal('decidedModal')" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</button>
-      </div>
-
-      <!-- Card 2: Karibu (Welcome) -->
-      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Welcome</h3>
-        <p class="text-lg text-gray-600 mb-4">We are excited to welcome you to our community! Whether you are new or have been attending for a while, we would love to get to know you better.</p>
-        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Get Connected</a>
-      </div>
-
-      <!-- Card 3: Prayer Request -->
-      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Prayer Request</h3>
-        <p class="text-lg text-gray-600 mb-4">If you need prayer, we are here for you. Submit your prayer requests and our team will be praying for you.</p>
-        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Submit Request</a>
-      </div>
-
-      <!-- Card 4: Join a Group -->
-      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Join a Group</h3>
-        <p class="text-lg text-gray-600 mb-4">Life is better in community. Find a group that fits your interests, and get connected with others who are growing in their faith.</p>
-        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Explore Groups</a>
-      </div>
-
-      <!-- Card 5: Volunteer -->
-      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Volunteer</h3>
-        <p class="text-lg text-gray-600 mb-4">We believe in serving our community. If you're interested in volunteering, we have many opportunities to get involved.</p>
-        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Get Involved</a>
-      </div>
-
-      <!-- Card 6: Give -->
-      <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Give</h3>
-        <p class="text-lg text-gray-600 mb-4">Your generosity makes a difference. Learn more about how you can support the ministry and make an impact in the lives of others.</p>
-        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Give Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Modal for 'I Have Decided' -->
-<div id="decidedModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-  <div class="bg-white p-8 rounded-lg w-96">
-    <h3 class="text-2xl font-bold text-gray-800 mb-4">I Have Decided to Follow Jesus</h3>
-    <p class="text-lg text-gray-600 mb-4">Please fill out this form to let us know you've made the decision to follow Jesus. Our team will reach out to guide you.</p>
-    
-    <!-- Form -->
-    <form action="#" method="POST" class="space-y-4">
-      <input type="text" name="name" placeholder="Your Name" class="w-full p-2 border border-gray-300 rounded-md" required>
-      <input type="email" name="email" placeholder="Your Email" class="w-full p-2 border border-gray-300 rounded-md" required>
-      <textarea name="message" placeholder="Your Message" class="w-full p-2 border border-gray-300 rounded-md" required></textarea>
-      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700">Submit</button>
-    </form>
-
-    <!-- Close Modal Button -->
-    <button onclick="closeModal('decidedModal')" class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700">Close</button>
+      <a href="#partner"
+         class="mt-6 text-center py-3 rounded-full text-white bg-for-christ">
+        Partner With Us
+      </a>
+    </nav>
   </div>
 </div>
 
-<script>
-  // Open Modal Function
-  function openModal(modalId) {
-    document.getElementById(modalId).classList.remove("hidden");
-  }
+<!-- ================= HERO ================= -->
+<section class="bg-royal text-white py-24">
+  <div class="max-w-4xl mx-auto text-center px-6">
 
-  // Close Modal Function
-  function closeModal(modalId) {
-    document.getElementById(modalId).classList.add("hidden");
-  }
-</script>
+    <h1
+      class="text-5xl md:text-5xl font-extrabold text-gray-100 mb-6"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      Uniting Nations in <span
+        class="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500
+               text-transparent bg-clip-text">
+        Prayer, Media, and Mission
+      </span>
+    </h1>
+    <p class="text-lg mb-10 opacity-90"  data-aos="fade-up"
+      data-aos-delay="200">
+        ANFOC Global Network mobilizes believers worldwide to advance God’s Kingdom
+      through strategic prayer movements, transformative media initiatives,
+      and bold evangelistic action across every continent.
+    </p>
 
-
-
-<!-- Connect with Us Section -->
-<section class="bg-gray-50 py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Connect with Us</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Contact Information -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Contact Information</h3>
-        <p class="text-lg text-gray-600 mb-4">We’d love to hear from you! Get in touch with us using the information below.</p>
-
-        <ul class="space-y-4">
-          <li class="flex items-center">
-            <span class="font-semibold text-gray-800">Address:</span>
-            <span class="ml-2 text-gray-600">Kibiko - Ngong', Kenya</span>
-          </li>
-          <li class="flex items-center">
-            <span class="font-semibold text-gray-800">Phone:</span>
-            <span class="ml-2 text-gray-600">+254 712 345 678</span>
-          </li>
-          <li class="flex items-center">
-            <span class="font-semibold text-gray-800">Email:</span>
-            <span class="ml-2 text-gray-600">kaindi@kaindi.org</span>
-          </li>
-        </ul>
-
-        <!-- Social Media Links -->
-        <div class="mt-8 flex space-x-6 justify-center">
-          <a href="https://www.facebook.com/ICCNairobi" class="text-blue-600 hover:text-blue-800">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2L6 14l6 6V4l6 6"></path>
-            </svg>
-          </a>
-          <a href="https://www.twitter.com/ICCNairobi" class="text-blue-400 hover:text-blue-600">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 19.4l3.4-6.6-5.5-1.5 4.4-4.4-5.5-2L12 5l3.2 4.6 3.4-.6 3 6.1-5 2.1L15 17.2l-2.7-4.8z"></path>
-            </svg>
-          </a>
-          <a href="https://www.instagram.com/ICCNairobi" class="text-pink-600 hover:text-pink-800">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 3H4.5a1.5 1.5 0 00-1.5 1.5v15a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5V4.5a1.5 1.5 0 00-1.5-1.5zm-7.5 12a3 3 0 110-6 3 3 0 010 6zm-2.25-6a2.25 2.25 0 114.5 0 2.25 2.25 0 01-4.5 0z"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Google Map -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Find Us</h3>
-        <div class="w-full h-64">
-          <!-- Embed Google Map -->
-          <iframe class="w-full h-full rounded-lg shadow-lg"
-            src="https://www.google.com/maps/embed/v1/place?q=Church%20Street,%20Nairobi,%20Kenya&key=YOUR_GOOGLE_MAPS_API_KEY"
-            allowfullscreen></iframe>
-        </div>
-      </div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="#programs"
+         class="px-8 py-3 rounded-full bg-for-christ font-bold">
+        Join the Prayer Wave
+      </a>
+      <a href="#media"
+         class="px-8 py-3 rounded-full border-2 border-white font-bold">
+        Watch Our Stories
+      </a>
     </div>
+  </div>
+</section>
 
-    <!-- Contact Form Section -->
-    <div class="bg-white p-6 rounded-lg shadow-lg mt-8">
-      <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Contact Form</h3>
-      <form action="#" method="POST">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label for="name" class="block text-gray-700">Name</label>
-            <input type="text" id="name" name="name" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm" required>
-          </div>
-          <div>
-            <label for="email" class="block text-gray-700">Email</label>
-            <input type="email" id="email" name="email" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm" required>
-          </div>
+<!-- ================= INTRO + VISION ================= -->
+
+<section id="about" class="py-20 bg-gray-50">
+  <div class="max-w-5xl mx-auto text-center px-6">
+    <h2 class="text-4xl font-extrabold mb-6">
+      Who We Are
+      <span class="block text-for-christ">ANFOC Global Network</span>
+    </h2>
+  <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+  A Christ-centered global movement birthed in prayer and
+  committed to seeing nations transformed through revival,
+  discipleship, media influence, and bold mission engagement.
+</p>
+
+  </div>
+</section>
+
+
+<div class="text-center mb-14">
+
+  <h3
+    class="text-3xl md:text-4xl font-extrabold text-royal"
+    data-aos="fade-up"
+    data-aos-delay="100"
+  >
+    How We Advance the Kingdom
+  </h3>
+</div>
+
+
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <!-- Vision Cards -->
+    <div class="grid gap-8 md:grid-cols-3 text-center">
+
+      <!-- Card 1: Prayer Movements -->
+      <div class="fc-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+          <i class="fas fa-praying-hands text-5xl"></i>
         </div>
-        <div class="mt-6">
-          <label for="message" class="block text-gray-700">Message</label>
-          <textarea id="message" name="message" rows="4" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm" required></textarea>
+
+        <h3 class="text-xl font-bold mb-3 fc-text">
+          Prayer Movements
+        </h3>
+
+        <p class="text-gray-600 max-w-xs mx-auto">
+          Mobilizing united, strategic intercession for nations,
+          leaders, cities, and global revival.
+        </p>
+      </div>
+
+      <!-- Card 2: Transformative Media -->
+      <div class="fc-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+          <i class="fas fa-video text-5xl"></i>
         </div>
-        <button type="submit" class="mt-6 w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700">Submit</button>
-      </form>
+
+        <h3 class="text-xl font-bold mb-3 fc-text">
+          Transformative Media
+        </h3>
+
+        <p class="text-gray-600 max-w-xs mx-auto">
+          Proclaiming Christ through film, storytelling,
+          digital platforms, and creative excellence.
+        </p>
+      </div>
+
+      <!-- Card 3: Bold Mission Action -->
+      <div class="fc-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+          <i class="fas fa-globe text-5xl"></i>
+        </div>
+
+        <h3 class="text-xl font-bold mb-3 fc-text">
+          Bold Mission Action
+        </h3>
+
+        <p class="text-gray-600 max-w-xs mx-auto">
+          Activating evangelism, discipleship,
+          and mission initiatives across nations.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</section>
+
+
+<!-- ================= PROGRAMS HIGHLIGHT ================= -->
+
+
+<section class="py-24 bg-gray-50" id="programs">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">
+      Transformative <span
+        class="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500
+               text-transparent bg-clip-text">
+        Programs & Initiatives
+      </span>
+    </h2>
+
+    <div class="grid gap-8 md:grid-cols-3">
+
+      <!-- Program Card -->
+      <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition"
+           data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-3">Media for Missions</h3>
+        <p class="text-gray-600 mb-4">
+          Training and empowering digital storytellers and media missionaries
+          to proclaim Christ creatively.
+        </p>
+        <a href="#" class="font-semibold
+           bg-gradient-to-r from-purple-600 to-orange-500
+           text-transparent bg-clip-text">
+          Explore Media →
+        </a>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition"
+           data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-bold mb-3">Go Proclaim Africa</h3>
+        <p class="text-gray-600 mb-4">
+          Coordinated evangelistic convoys bringing the Gospel
+          to unreached communities across Africa.
+        </p>
+        <a href="#" class="font-semibold
+           bg-gradient-to-r from-purple-600 to-orange-500
+           text-transparent bg-clip-text">
+          Join the Caravan →
+        </a>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition"
+           data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-bold mb-3">Global Prayer Wave</h3>
+        <p class="text-gray-600 mb-4">
+          Sacred gatherings of intense worship, intercession,
+          and divine encounter with God’s presence.
+        </p>
+        <a href="#" class="font-semibold
+           bg-gradient-to-r from-purple-600 to-orange-500
+           text-transparent bg-clip-text">
+          Join the Prayer Wave →
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- Footer Section -->
-<footer class="bg-gray-800 text-white py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-      
-      <!-- Contact Information -->
-      <div class="space-y-6">
-        <h3 class="text-xl font-bold">Contact Us</h3>
-        <p class="text-gray-400">Kibiko - Ngong', Kenya</p>
-        <p class="text-gray-400">Phone: +254 712 345 678</p>
-        <p class="text-gray-400">Email: kaindi@kaindi.org</p>
-      </div>
 
-      <!-- Quick Links -->
-      <div class="space-y-6">
-        <h3 class="text-xl font-bold">Quick Links</h3>
-        <ul class="space-y-4">
-          <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
-        </ul>
-      </div>
+<!-- ================= MEDIA / FILMS ================= -->
+<section id="media" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
 
-      <!-- Social Media & Newsletter -->
-      <div class="space-y-6">
-        <h3 class="text-xl font-bold">Connect With Us</h3>
+    <h2 class="text-center text-4xl font-extrabold mb-12">
+      RCT Films & Theatre
+      <span class="block text-for-christ">Revealing Christ Creatively</span>
+    </h2>
 
-        <!-- Social Icons -->
-        <div class="flex space-x-6 text-2xl">
-          <a href="#" class="text-gray-400 hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-gray-400 hover:text-red-600"><i class="fab fa-youtube"></i></a>
-          <a href="#" class="text-gray-400 hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- MEDIA CARD -->
+      <div class="rounded-xl overflow-hidden shadow bg-white"
+           data-cms="media">
+        <div class="bg-royal h-48 flex items-center justify-center text-white text-lg">
+          ▶ Film Preview
         </div>
-
-        <!-- Newsletter Signup -->
-        <div class="mt-6">
-          <h4 class="text-lg font-semibold">Subscribe to our Newsletter</h4>
-          <form action="#" method="POST" class="mt-4 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <input type="email" name="email" placeholder="Your Email" class="p-2 w-full rounded-md border border-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-600" required>
-            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Subscribe</button>
-          </form>
+        <div class="p-4">
+          <h4 class="font-bold">Hope of the Nations</h4>
+          <p class="text-sm text-gray-500">Short Film</p>
         </div>
       </div>
-    </div>
 
-    <!-- Footer Bottom -->
-    <div class="mt-12 text-center text-gray-400 text-sm">
-      <p>&copy; 2025 Joseph Kaindi. All rights reserved.</p>
+      <div class="rounded-xl overflow-hidden shadow bg-white"
+           data-cms="media">
+        <div class="bg-royal h-48 flex items-center justify-center text-white text-lg">
+          ▶ Documentary
+        </div>
+        <div class="p-4">
+          <h4 class="font-bold">Africa Shall Be Saved</h4>
+          <p class="text-sm text-gray-500">Documentary</p>
+        </div>
+      </div>
+
     </div>
   </div>
+</section>
+
+
+      <!-- Stats Section -->
+
+
+
+      <section class="py-16 bg-white text-center">
+  <span
+    class="inline-block mb-4 text-sm font-semibold tracking-widest uppercase text-for-christ"
+    data-aos="fade-up"
+  >
+    Our Impact
+  </span>
+
+  <h2
+    class="text-3xl md:text-4xl font-extrabold text-royal mb-6"
+    data-aos="fade-up"
+    data-aos-delay="100"
+  >
+    What God Has Done Through This Vision
+  </h2>
+
+  <p
+    class="max-w-3xl mx-auto text-gray-600"
+    data-aos="fade-up"
+    data-aos-delay="200"
+  >
+    Through sustained prayer, unity across nations, and obedience
+    to the Great Commission, we have witnessed tangible spiritual impact.
+  </p>
+</section>
+
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-3 text-center">
+
+    <!-- Stat 1 -->
+    <div data-aos="zoom-in">
+      <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+        <i class="fas fa-praying-hands text-4xl"></i>
+      </div>
+      <h3
+        class="text-5xl font-extrabold
+               bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500
+               text-transparent bg-clip-text counter"
+        data-target="234">
+        0
+      </h3>
+      <p class="mt-2 text-gray-700 font-medium max-w-xs mx-auto">
+        Consecutive Days of Global Intercession
+      </p>
+    </div>
+
+    <!-- Stat 2 -->
+    <div data-aos="zoom-in" data-aos-delay="100">
+      <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+        <i class="fas fa-globe text-4xl"></i>
+      </div>
+      <h3
+        class="text-5xl font-extrabold
+               bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500
+               text-transparent bg-clip-text counter"
+        data-target="195">
+        0
+      </h3>
+      <p class="mt-2 text-gray-700 font-medium max-w-xs mx-auto">
+        Nations Prayed For by Name
+      </p>
+    </div>
+
+    <!-- Stat 3 -->
+    <div data-aos="zoom-in" data-aos-delay="200">
+      <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+        <i class="fas fa-users text-4xl"></i>
+      </div>
+      <h3
+        class="text-5xl font-extrabold
+               bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500
+               text-transparent bg-clip-text counter"
+        data-target="1000">
+        0
+      </h3>
+      <p class="mt-2 text-gray-700 font-medium max-w-xs mx-auto">
+        Intercessors United Globally
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<!-- Footer with Animated Wave Divider -->
+<footer class="relative bg-royal text-white pt-16 pb-6 overflow-hidden">
+
+  <!-- Wave / Gradient Divider -->
+  <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] animate-wave">
+    <svg class="relative block w-[200%] h-12" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#5b2cff" fill-opacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,144C672,149,768,203,864,202.7C960,203,1056,149,1152,144C1248,139,1344,181,1392,202.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-3 text-center relative z-10">
+
+    <!-- Brand / Logo -->
+    <div class="text-center md:text-left">
+      <img src="Images/logo.png" alt="ANFOC Logo" class="h-16 mx-auto md:mx-0 mb-2">
+      <div class="font-extrabold text-2xl mb-2">
+        ALL NATIONS <span class="text-for-christ">FOR CHRIST</span>
+      </div>
+      <p class="text-gray-300 max-w-sm mx-auto md:mx-0">
+        Mobilizing believers worldwide to advance God’s Kingdom
+        through prayer, media, and mission initiatives.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="text-center">
+      <h4 class="font-bold mb-3 text-lg">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="#about" class="hover:text-fcMagenta transition-colors">About Us</a></li>
+        <li><a href="#programs" class="hover:text-fcMagenta transition-colors">Programs</a></li>
+        <li><a href="#media" class="hover:text-fcMagenta transition-colors">Media Hub</a></li>
+        <li><a href="#donate" class="hover:text-fcMagenta transition-colors">Partner / Donate</a></li>
+        <li><a href="#contact" class="hover:text-fcMagenta transition-colors">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="text-center md:text-right">
+      <h4 class="font-bold mb-3 text-lg">Follow Us</h4>
+      <div class="flex justify-center md:justify-end gap-4">
+        <a href="#" class="text-yellow-400 hover:text-yellow-300 text-2xl transition-colors">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-yellow-400 hover:text-yellow-300 text-2xl transition-colors">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-yellow-400 hover:text-yellow-300 text-2xl transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-yellow-400 hover:text-yellow-300 text-2xl transition-colors">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="mt-8 text-center text-gray-400 text-sm relative z-10">
+    © 2025 ANFOC Global Network · Mobilizing Nations for Christ
+  </div>
+
 </footer>
+
+<!-- Add this CSS at the top of your <style> or in your Tailwind config -->
+<style>
+@keyframes wave {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-25%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-wave {
+  animation: wave 6s ease-in-out infinite;
+}
+</style>
+
+
+<!-- ================= JS ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const closeMenu = document.getElementById("closeMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.onclick = () => mobileMenu.classList.remove("hidden");
+  closeMenu.onclick = () => mobileMenu.classList.add("hidden");
+</script>
+
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 900,
+    once: true
+  });
+</script>
+
+
+<script>
+  const counters = document.querySelectorAll('.counter');
+  let counterStarted = false;
+
+  const startCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      let current = 0;
+
+      const increment = target / 100;
+
+      const updateCounter = () => {
+        current += increment;
+
+        if (current < target) {
+          counter.textContent = Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target.toLocaleString();
+        }
+      };
+
+      updateCounter();
+    });
+  };
+
+  // Trigger when section enters view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !counterStarted) {
+        startCounters();
+        counterStarted = true;
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(document.querySelector('.counter'));
+</script>
+
+<script>
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      navbar.classList.add("shadow-lg");
+    } else {
+      navbar.classList.remove("shadow-lg");
+    }
+  });
+</script>
 
 
 </body>
