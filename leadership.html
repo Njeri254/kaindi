@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Nations For Christ | ANFOC Global Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Brand Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: "#0f2a44",
+            fcPurple: "#5b2cff",
+            fcMagenta: "#c026d3",
+            fcOrange: "#f97316",
+          },
+          backgroundImage: {
+            "for-christ": "linear-gradient(90deg, #5b2cff, #c026d3, #f97316)",
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<!-- Font Awesome CDN -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  rel="stylesheet"
+/>
+
+
+
+
+  <!-- Gradient Text Utility -->
+  <style>
+    .text-for-christ {
+      background: linear-gradient(90deg, #5b2cff, #c026d3, #f97316);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+
+</head>
+
+<body class="font-sans text-gray-800">
+
+<!-- ================= HEADER / NAV ================= -->
+<header id="navbar"
+  class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LOGO -->
+<!-- LOGO -->
+<!-- LOGO -->
+<div class="flex items-center gap-3">
+  <img
+    src="Images/logo.png"
+    alt="All Nations For Christ Logo"
+    class="h-12 w-auto"
+  />
+</div>
+
+
+
+
+    <!-- DESKTOP NAV -->
+    <nav class="hidden md:flex items-center space-x-8 font-semibold text-royal">
+      <a href="about.html" class="hover:text-fcPurple">About</a>
+      <a href="#programs" class="hover:text-fcPurple">Programs</a>
+      <a href="leadership.html" class="hover:text-fcPurple">Leadership</a>
+      <a href="#get-involved" class="hover:text-fcPurple">Get Involved</a>
+      <a href="#resources" class="hover:text-fcPurple">Resources</a>
+      <a href="#media" class="hover:text-fcPurple">Media Hub</a>
+      <a href="#donate" class="hover:text-fcPurple">Donate/Partner</a>
+      <a href="#contact" class="hover:text-fcPurple">Contact</a>
+
+      <a href="#partner"
+         class="px-6 py-2 rounded-full text-white font-bold bg-for-christ">
+        Partner With Us
+      </a>
+    </nav>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menuBtn" class="md:hidden text-3xl text-royal">☰</button>
+  </div>
+</header>
+
+<!-- ================= MOBILE DRAWER ================= -->
+<div id="mobileMenu" class="fixed inset-0 bg-black/40 hidden z-50">
+  <div class="bg-white w-72 h-full p-6">
+    <button id="closeMenu" class="text-2xl mb-6">✕</button>
+
+    <nav class="flex flex-col space-y-5 font-semibold text-royal">
+      <a href="about.html">About</a>
+      <a href="#programs">Programs</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="#get-involved">Get Involved</a>
+      <a href="#resources">Resources</a>
+      <a href="#media">Media Hub</a>
+      <a href="#donate">Donate/Partner</a>
+      <a href="#contact">Contact</a>
+
+      <a href="#partner"
+         class="mt-6 text-center py-3 rounded-full text-white bg-for-christ">
+        Partner With Us
+      </a>
+    </nav>
+  </div>
+</div>
+
+
+
+<!-- Leadership Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Our Leadership</h2>
+      <p class="text-gray-600 text-lg">Meet our Board, Directors, and Coordinators</p>
+    </div>
+
+    <!-- Leadership Profiles (Example Grid) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <!-- Example Card -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="Images/ceo.jpg" alt="Board Member" class="w-full h-64 object-cover">
+        <div class="p-6 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">Evangelist. Joseph Kaindi</h3>
+          <p class="text-gray-500">CEO</p>
+        </div>
+      </div>
+      <!-- Add more cards for other members -->
+    </div>
+
+    <!-- Statement of Faith Header -->
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-2">Our Statement of Faith</h2>
+      <p class="text-gray-600 italic">Rooted in the Word. Driven by the Spirit. Focused on the Nations.</p>
+    </div>
+
+    
+    <!-- Accordion Container -->
+<div class="space-y-4">
+  <!-- Example Accordion Item -->
+  <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray-800 flex justify-between items-center accordion-button">
+      1. The Scriptures
+      <span class="accordion-icon text-xl font-bold">+</span>
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+      We believe the Bible is the inspired and infallible Word of God — the final authority for faith, life, and truth. <br>
+      <strong>Scripture Reference:</strong> 2 Timothy 3:16–17 | 2 Peter 1:20–21
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray-800 flex justify-between items-center accordion-button">
+      2. The One True God
+      <span class="accordion-icon text-xl font-bold">+</span>
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+      We believe in one eternal God — Father, Son, and Holy Spirit — Creator of all and Lord over all. <br>
+      <strong>Scripture Reference:</strong> Deuteronomy 6:4 | Matthew 28:19 | 2 Corinthians 13:14
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray-800 flex justify-between items-center accordion-button">
+      3. The Lord Jesus Christ
+      <span class="accordion-icon text-xl font-bold">+</span>
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+      We believe Jesus Christ is the Son of God — fully God and fully man — who lived, died, and rose again for our salvation<br>
+      <strong>Scripture Reference:</strong> John 1:1–14 | 1 Corinthians 15:3–4
+    </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray-800 flex justify-between items-center accordion-button">
+      4. The Holy Spirit
+      <span class="accordion-icon text-xl font-bold">+</span>
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+      We believe in the person and power of the Holy Spirit, who convicts, empowers, and equips believers for godly living and global mission.<br>
+      <strong>Scripture Reference:</strong> Acts 1:8 | John 14:16–17 | 1 Corinthians 12:4–11
+    </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray-800 flex justify-between items-center accordion-button">
+      5. Salvation by Grace
+      <span class="accordion-icon text-xl font-bold">+</span>
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+      We believe salvation is a gift of grace through faith in Jesus Christ — received through repentance and belief. <br>
+      <strong>Scripture Reference:</strong> Ephesians 2:8–9 | Romans 10:9–10 | John 3:3
+    </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray-800 flex justify-between items-center accordion-button">
+      6. The Church
+      <span class="accordion-icon text-xl font-bold">+</span>               
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+     We believe in the one Body of Christ — the global Church — called to worship God, disciple believers, and fulfill the Great Commission. <br>
+      <strong>Scripture Reference:</strong> Matthew 16:18 | Acts 2:42–47 | Ephesians 4:11–13
+    </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray   -800 flex justify-between items-center accordion-button">
+      7. Prayer & Worship
+      <span class="accordion-icon text-xl font-bold">+</span>           
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+      We believe prayer and worship are the heartbeat of revival — uniting believers with God’s purposes for the nations. <br>
+      <strong>Scripture Reference:</strong> 2 Chronicles 7:14 | John 4:23–24
+    </div>
+    </div>
+
+
+    <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray-800 flex justify-between items-center accordion-button">
+      8. The Mission
+      <span class="accordion-icon text-xl font-bold">+</span>
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+      We believe every believer is called to be a witness of Christ, using every platform — from pulpits to media — to proclaim His Gospel to the ends of the earth. <br>
+      <strong>Scripture Reference:</strong> Matthew 28:18–20 | Acts 1:8
+    </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray-800 flex justify-between items-center accordion-button">
+      9. The Second Coming of Christ
+      <span class="accordion-icon text-xl font-bold">+</span>
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+      We believe in the blessed hope — the personal, glorious return of Jesus Christ to judge the world and establish His eternal Kingdom. <br>
+      <strong>Scripture Reference:</strong> Titus 2:13 | Revelation 22:12–13
+    </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow">
+    <button class="w-full text-left px-6 py-4 font-semibold text-gray-800 flex justify-between items-center accordion-button">
+      10. Eternal Hope
+      <span class="accordion-icon text-xl font-bold">+</span>
+    </button>
+    <div class="px-6 py-4 text-gray-600 accordion-content hidden">
+      We believe in a new heaven and new earth, where God dwells with His people forever in righteousness and peace. <br>
+      <strong>Scripture Reference:</strong> Revelation 21:1–7
+    </div>
+
+
+
+<!-- Accordion JS: Single Open -->
+<script>
+  const accordions = document.querySelectorAll(".accordion-button");
+
+  accordions.forEach(button => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector(".accordion-icon");
+
+      // Check if this accordion is already open
+      const isOpen = !content.classList.contains("hidden");
+
+      // Close all accordions
+      document.querySelectorAll(".accordion-content").forEach(c => c.classList.add("hidden"));
+      document.querySelectorAll(".accordion-icon").forEach(i => i.textContent = "+");
+
+      // Toggle this one (only open if it was previously closed)
+      if(!isOpen) {
+        content.classList.remove("hidden");
+        icon.textContent = "−";
+      }
+    });
+  });
+</script>
+
+  </div>
+</section>
+
+
+
+<div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-2">Our Confession</h2>
+      <p class="text-gray-600 italic">“We live to see Christ known, loved, and exalted among the nations — until the earth is filled with the knowledge of the glory of the Lord.”
+        <br> <strong>Habakkuk 2:14</strong>
+</p>
+    </div>
+
+<!-- ================= FOOTER ================= -->
+<!-- Footer with Animated Wave Divider -->
+<footer class="relative bg-royal text-white pt-16 pb-6 overflow-hidden">
+
+  <!-- Wave / Gradient Divider -->
+  <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] animate-wave">
+    <svg class="relative block w-[200%] h-12" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#5b2cff" fill-opacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,144C672,149,768,203,864,202.7C960,203,1056,149,1152,144C1248,139,1344,181,1392,202.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-3 text-center relative z-10">
+
+    <!-- Brand / Logo -->
+    <div class="text-center md:text-left">
+      <img src="Images/logo.png" alt="ANFOC Logo" class="h-16 mx-auto md:mx-0 mb-2">
+      <div class="font-extrabold text-2xl mb-2">
+        ALL NATIONS <span class="text-for-christ">FOR CHRIST</span>
+      </div>
+      <p class="text-gray-300 max-w-sm mx-auto md:mx-0">
+        Mobilizing believers worldwide to advance God’s Kingdom
+        through prayer, media, and mission initiatives.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="text-center">
+      <h4 class="font-bold mb-3 text-lg">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="#about" class="hover:text-fcMagenta transition-colors">About Us</a></li>
+        <li><a href="#programs" class="hover:text-fcMagenta transition-colors">Programs</a></li>
+        <li><a href="#media" class="hover:text-fcMagenta transition-colors">Media Hub</a></li>
+        <li><a href="#donate" class="hover:text-fcMagenta transition-colors">Partner / Donate</a></li>
+        <li><a href="#contact" class="hover:text-fcMagenta transition-colors">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="text-center md:text-right">
+      <h4 class="font-bold mb-3 text-lg">Follow Us</h4>
+      <div class="flex justify-center md:justify-end gap-4">
+        <a href="#" class="text-yellow-400 hover:text-yellow-300 text-2xl transition-colors">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-yellow-400 hover:text-yellow-300 text-2xl transition-colors">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-yellow-400 hover:text-yellow-300 text-2xl transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-yellow-400 hover:text-yellow-300 text-2xl transition-colors">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="mt-8 text-center text-gray-400 text-sm relative z-10">
+    © 2026 ANFOC Global Network · Mobilizing Nations for Christ
+  </div>
+
+</footer>
+
+<!-- Add this CSS at the top of your <style> or in your Tailwind config -->
+<style>
+@keyframes wave {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-25%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-wave {
+  animation: wave 6s ease-in-out infinite;
+}
+</style>
+
+
+<!-- ================= JS ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const closeMenu = document.getElementById("closeMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.onclick = () => mobileMenu.classList.remove("hidden");
+  closeMenu.onclick = () => mobileMenu.classList.add("hidden");
+</script>
+
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 900,
+    once: true
+  });
+</script>
+
+
+<script>
+  const counters = document.querySelectorAll('.counter');
+  let counterStarted = false;
+
+  const startCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      let current = 0;
+
+      const increment = target / 100;
+
+      const updateCounter = () => {
+        current += increment;
+
+        if (current < target) {
+          counter.textContent = Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target.toLocaleString();
+        }
+      };
+
+      updateCounter();
+    });
+  };
+
+  // Trigger when section enters view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !counterStarted) {
+        startCounters();
+        counterStarted = true;
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(document.querySelector('.counter'));
+</script>
+
+<script>
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      navbar.classList.add("shadow-lg");
+    } else {
+      navbar.classList.remove("shadow-lg");
+    }
+  });
+</script>
+
+
+</body>
+</html>
+
+
